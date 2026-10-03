@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ForgeAI — Software Engineer Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+<aside>
+  <div class="brand"><span class="logo">F</span><div>Forge<span>AI</span><small>Software Engineer Agent</small></div></div>
+  <nav>
+    <a class="active">⌘ <span>Agent Workspace</span></a>
+    <a>◈ <span>Projects</span></a>
+    <a>◉ <span>Memory</span></a>
+    <a>✓ <span>Tests & Review</span></a>
+  </nav>
+  <div class="side-card"><strong>Engineering mode</strong><p>Plan → Build → Test → Review → Deploy</p></div>
+</aside>
+<main>
+<header><div><div class="eyebrow">AI ENGINEERING WORKSPACE</div><h1>Build software from an idea.</h1></div><div class="status"><i></i> Agent online</div></header>
+
+<section class="composer">
+  <div class="prompt-head"><span>PROJECT BRIEF</span><span id="stackLabel">AUTO STACK</span></div>
+  <textarea id="prompt" placeholder="Example: Build a SaaS dashboard where teams can manage projects, tasks and analytics..."></textarea>
+  <div class="composer-bottom">
+    <select id="stack"><option value="auto">Auto-detect stack</option><option value="python">Python / FastAPI</option><option value="go">Go / REST API</option></select>
+    <button id="run">Generate engineering plan <b>→</b></button>
+  </div>
+</section>
+
+<section class="pipeline" id="pipeline">
+  <div class="step active"><b>01</b><span>Analyze</span></div><div class="line"></div>
+  <div class="step"><b>02</b><span>Architect</span></div><div class="line"></div>
+  <div class="step"><b>03</b><span>Build</span></div><div class="line"></div>
+  <div class="step"><b>04</b><span>Test</span></div><div class="line"></div>
+  <div class="step"><b>05</b><span>Review</span></div>
+</section>
+
+<section class="results">
+<div class="result-card"><div class="card-title"><span>Architecture</span><em id="apiState">DEMO ENGINE</em></div><div id="architecture" class="architecture"><div class="empty">Describe a project above to generate its architecture.</div></div></div>
+<div class="result-card"><div class="card-title"><span>Implementation tasks</span><em>AGENT PLAN</em></div><div id="tasks" class="tasks"><div class="empty">Your engineering backlog will appear here.</div></div></div>
+<div class="result-card"><div class="card-title"><span>Project memory</span><em>CONTEXT</em></div><pre id="memory" class="memory">{ "status": "waiting" }</pre></div>
+</section>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
